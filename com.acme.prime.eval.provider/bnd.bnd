@@ -1,0 +1,58 @@
+#
+# com.acme.prime.eval.provider PROVIDER BUNDLE
+#
+
+Bundle-Version:					1.0.0.${tstamp}
+Bundle-Description: \
+	The provider bundle for com.acme.prime.eval.provider. \
+	\
+	${warning;Please update this Bundle-Description in com.acme.prime.eval.provider/api.bnd}
+
+Export-Package: com.acme.prime.eval.api
+
+Private-Package:  \
+	com.acme.prime.eval.provider,\
+	parsii.*
+
+-includeresource: {readme.md}
+
+-buildpath: \
+	osgi.enroute.base.api;version=2.1,\
+	com.acme.prime.eval.api;version=latest,\
+	org.apache.felix.gogo.runtime,\
+	com.scireum:parsii
+
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12, \
+	osgi.enroute.hamcrest.wrapper;version=1.3
+
+-runfw: org.eclipse.osgi;version='[3.10.100.v20150529-1857,3.10.100.v20150529-1857]'
+-runee: JavaSE-1.8
+-runrequires: \
+	bnd.identity;version='latest';id='com.acme.prime.eval.provider',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='osgi.enroute.webconsole.xray.provider'
+-resolve: auto
+-runbundles: \
+	com.acme.prime.eval.provider;version=snapshot,\
+	org.apache.felix.configadmin;version='[1.8.8,1.8.9)',\
+	org.apache.felix.gogo.runtime;version='[1.0.0,1.0.1)',\
+	org.apache.felix.gogo.shell;version='[1.0.0,1.0.1)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
+	org.eclipse.equinox.metatype;version='[1.4.100,1.4.101)',\
+	org.osgi.service.metatype;version='[1.3.0,1.3.1)',\
+	json;version='[20160212.0.0,20160212.0.1)',\
+	org.apache.commons.fileupload;version='[1.3.2,1.3.3)',\
+	org.apache.commons.io;version='[2.5.0,2.5.1)',\
+	org.apache.felix.http.jetty;version='[3.2.0,3.2.1)',\
+	org.apache.felix.http.servlet-api;version='[1.1.2,1.1.3)',\
+	org.apache.felix.webconsole;version='[4.2.16,4.2.17)',\
+	org.eclipse.equinox.event;version='[1.3.100,1.3.101)',\
+	org.osgi.compendium;version='[4.1.0,4.1.1)',\
+	org.osgi.service.event;version='[1.3.1,1.3.2)',\
+	osgi.enroute.bostock.d3.webresource;version='[3.5.6,3.5.7)',\
+	osgi.enroute.executor.simple.provider;version='[2.1.0,2.1.1)',\
+	osgi.enroute.logger.simple.provider;version='[2.1.0,2.1.1)',\
+	osgi.enroute.web.simple.provider;version='[2.1.0,2.1.1)',\
+	osgi.enroute.webconsole.xray.provider;version='[2.1.0,2.1.1)'

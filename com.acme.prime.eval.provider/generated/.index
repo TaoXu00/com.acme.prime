@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.acme.prime.eval.provider" increment="1532448253954">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.acme.prime.eval.provider"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.0.201807241604" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.0.201807241604" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.acme.prime.eval.provider"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.0.201807241604" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.acme.prime.eval.provider"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.acme.prime.eval.api"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="com.acme.prime.eval.api.Eval" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="54304" type="Long"/>
+      <attribute name="url" value="generated/com.acme.prime.eval.provider.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="24A98682DD370139EEFF393C17EB08371496B9979CC58DC5E861F990753C960B"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/home/rui/com.acme.prime"/>
+      <attribute name="project.path" value="/com.acme.prime.eval.provider"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.acme.prime.eval.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=1.1.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>
